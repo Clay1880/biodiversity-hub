@@ -2,7 +2,10 @@
 
 Smart Biodiversity Monitoring System, AIT Pune. Software prototype: a React web app plus a Flask backend with the ML models.
 
-## Run (two terminals)
+## Quick start (Windows)
+Double-click `start.bat`. It installs missing packages on the first run, starts the backend and the website in two windows, and opens the browser.
+
+## Run manually (two terminals)
     # 1. Backend (CNN + Random Forest / SVM / Decision Tree)
     pip install -r server/requirements.txt
     python server/app.py          # http://localhost:5000, first start downloads the MobileNetV2 weights (14 MB)
