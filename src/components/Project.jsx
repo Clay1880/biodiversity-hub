@@ -40,7 +40,7 @@ export default function Project({ go }) {
             {bySource.map(({ s, n }) => (
               <li key={s}><SourceBadge source={s} /><span><b>{n}</b> {n === 1 ? 'dataset or tool' : 'datasets and tools'} in the finder, each linked to its page.</span></li>
             ))}
-            <li><span className="badge" style={{ '--c': '#9FB5AE' }}>Papers</span><span><b>{PAPERS.length}</b> papers from the literature survey, each linked by DOI.</span></li>
+            <li><span className="badge" style={{ '--c': '#9FB5AE' }}>Papers</span><span><b>{PAPERS.length}</b> papers from the literature survey, each linked to its source.</span></li>
           </ul>
         </div>
       </div>

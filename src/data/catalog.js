@@ -207,6 +207,58 @@ export const PAPERS = [
       'Automated remote sensing supports preserving ecosystem services.',
     ],
   },
+  {
+    id: 'p9', short: 'Invasive flowers CNN', kind: 'IEEE paper', theme: 'IEEE survey',
+    title: 'Detection And Alert System Of Invasive Flower Species Using CNN',
+    venue: 'IEEE Xplore',
+    url: 'https://ieeexplore.ieee.org/document/10127403',
+    scope: 'Methods listed in our literature survey: CNN, machine learning, anomaly detection, image processing.',
+    findings: [
+      'CNN can be used to automatically identify flower species from images.',
+      'Image-based identification can help detect potentially invasive species.',
+      'Anomaly detection can identify flowers that differ from the expected native species.',
+      'The approach can support biodiversity protection and ecological monitoring.',
+    ],
+  },
+  {
+    id: 'p10', short: 'Poacher detection ML', kind: 'IEEE paper', theme: 'IEEE survey',
+    title: 'Enhancing Wildlife Protection: Poacher Detection Using Machine Learning Models',
+    venue: 'IEEE Xplore',
+    url: 'https://ieeexplore.ieee.org/abstract/document/10911994',
+    scope: 'Methods listed in our literature survey: SVM, Random Forest, Decision Tree, CNN, data augmentation, multiple datasets.',
+    findings: [
+      'SVM, Random Forest, Decision Tree and CNN can be applied to poaching-detection tasks.',
+      'Machine-learning models can help automate the identification of suspicious activities from collected data.',
+      'CNN-based analysis is useful for processing images related to wildlife protection.',
+      'Combining different ML approaches provides a technical framework for automated wildlife-surveillance systems.',
+    ],
+  },
+  {
+    id: 'p11', short: 'IoT in conservation', kind: 'IEEE paper', theme: 'IEEE survey',
+    title: 'IoT Applications in Wildlife Conservation: Tracking and Protecting Endangered Species',
+    venue: 'IEEE Xplore',
+    url: 'https://ieeexplore.ieee.org/abstract/document/10395145',
+    scope: 'Methods listed in our literature survey: IoT devices, motion sensors, cameras, environmental sensors, Random Forest, real-time analytics.',
+    findings: [
+      'IoT devices can provide continuous monitoring of wildlife and environmental conditions.',
+      'Motion sensors and cameras can collect information about animal movement and activity.',
+      'Random Forest can be used to analyse and classify collected wildlife data.',
+      'Real-time data analysis can support wildlife tracking, species identification and conservation monitoring.',
+    ],
+  },
+  {
+    id: 'p12', short: 'IoT forest health DL', kind: 'IEEE paper', theme: 'IEEE survey',
+    title: 'IoT-Enhanced Deep Learning System for Forest Health and Monitoring',
+    venue: 'IEEE Xplore',
+    url: 'https://ieeexplore.ieee.org/abstract/document/11468819',
+    scope: 'Methods listed in our literature survey: IoT sensors, MobileNet, DeepForest, YOLOv8, WebRTC, Streamlit.',
+    findings: [
+      'IoT sensors enable continuous collection of forest environmental data such as temperature and humidity.',
+      'Deep-learning models can automate tree and species detection and forest monitoring.',
+      'CNN-based models such as MobileNet are suitable for image-based identification tasks.',
+      'Combining IoT, deep learning and video or image analysis can provide an integrated forest-monitoring system.',
+    ],
+  },
 ]
 
 export const DRIVERS = [

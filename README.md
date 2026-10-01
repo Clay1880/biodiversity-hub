@@ -27,7 +27,7 @@ Map, Datasets, Report and Papers work without the backend. Identify and Analyze 
 - **Analyze:** Random Forest, SVM and Decision Tree (scikit-learn, 80/20 split) on the GBIF records or an uploaded CSV, with accuracy, precision, recall, F1, confusion matrix, feature importance and a majority-class baseline.
 - **Alerts:** alerts from reports (poaching, habitat disturbance, pollution, endangered-species sightings) and a hotspot ranking.
 - **Report:** log sightings and threats; saved in the browser's localStorage. Three entries are labelled "Sample (demo data)".
-- **Datasets / Papers:** 16 hand-checked dataset links and 8 papers with DOIs.
+- **Datasets / Papers:** 16 hand-checked dataset links and 12 papers, each linked to its DOI or IEEE Xplore page.
 
 ## Honest limits
 - The CNN is an ImageNet model: about 400 animal types and 2 plants. Fine-tuning on iNaturalist is future work.

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { DATASETS, DRIVERS, PAPERS, SOURCES } from '../data/catalog.js'
 import { SourceBadge } from './SourceBadge.jsx'
 
-const THEMES = ['All', 'Causes', 'Strategies', 'Technology']
+const THEMES = ['All', 'IEEE survey', 'Causes', 'Strategies', 'Technology']
 
 export default function Papers({ openId, onViewRegion }) {
   const [theme, setTheme] = useState('All')
@@ -21,7 +21,7 @@ export default function Papers({ openId, onViewRegion }) {
     <section className="page">
       <header className="page-head">
         <h1>Research behind the project</h1>
-        <p>The papers from our literature survey. Open one to read its findings and jump to datasets that could back it up.</p>
+        <p>The papers from our literature survey, including the four IEEE papers from our slides. Open one to read its findings and jump to datasets that could back it up.</p>
       </header>
 
       <div className="drivers">
@@ -52,14 +52,14 @@ export default function Papers({ openId, onViewRegion }) {
               <button className="paper-head" onClick={() => setOpen(isOpen ? null : p.id)} aria-expanded={isOpen}>
                 <span className="paper-kind">{p.kind}</span>
                 <h3>{p.title}</h3>
-                <span className="paper-venue">{p.venue}, {p.year}</span>
+                <span className="paper-venue">{p.venue}{p.year ? `, ${p.year}` : ''}</span>
               </button>
               {isOpen && (
                 <div className="paper-body">
                   <p className="scope">{p.scope}</p>
                   <ul>{p.findings.map(f => <li key={f}>{f}</li>)}</ul>
                   <div className="paper-links">
-                    <a className="btn" href={`https://doi.org/${p.doi}`} target="_blank" rel="noreferrer">Read paper (DOI) ↗</a>
+                    <a className="btn" href={p.doi ? `https://doi.org/${p.doi}` : p.url} target="_blank" rel="noreferrer">{p.doi ? 'Read paper (DOI) ↗' : 'Read on IEEE Xplore ↗'}</a>
                     {p.region && <button className="btn ghost" onClick={() => onViewRegion(p.region)}>See the Atlantic Forest on the map</button>}
                   </div>
                   {related.length > 0 && (

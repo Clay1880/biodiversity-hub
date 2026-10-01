@@ -228,7 +228,7 @@ A form where anyone can log a **wildlife sighting, habitat disturbance, pollutio
 ### 6.6 Datasets and Papers tabs
 
 - **Datasets:** 16 hand-checked links to open datasets (Kaggle, GitHub, GBIF, portals) for species images, bird sound, camera traps, land cover and forest/fire data. You can search and filter them, and each shows which papers relate to it.
-- **Papers:** 8 papers from our literature survey, each with a DOI link to the original.
+- **Papers:** 12 papers from our literature survey (the 4 IEEE papers from our slides plus 8 others), each linked to its DOI or IEEE Xplore page.
 
 ---
 
