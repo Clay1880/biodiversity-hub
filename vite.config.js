@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: './',
-  server: { proxy: { '/api': 'http://localhost:5000' } }, // Flask backend in server/
+  server: {
+    proxy: { '/api': 'http://localhost:5000' }, // Flask backend in server/
+    allowedHosts: ['.trycloudflare.com', '.ngrok-free.app', '.ngrok-free.dev', '.loca.lt'], // tunnel links used by share.bat
+  },
 })

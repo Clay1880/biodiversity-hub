@@ -5,6 +5,9 @@ Smart Biodiversity Monitoring System, AIT Pune. Software prototype: a React web 
 ## Quick start (Windows)
 Double-click `start.bat`. It installs missing packages on the first run, starts the backend and the website in two windows, and opens the browser.
 
+## Share it with another laptop
+Run `share.bat`. It starts both servers and a free Cloudflare tunnel (install once: `winget install Cloudflare.cloudflared`). Open the `trycloudflare.com` link it shows on any device, or `http://YOUR-IP:5173` on the same Wi-Fi. It works only while your laptop and the windows stay open.
+
 ## Run manually (two terminals)
     # 1. Backend (CNN + Random Forest / SVM / Decision Tree)
     pip install -r server/requirements.txt
