@@ -4,10 +4,12 @@ cd /d "%~dp0"
 
 where python >nul 2>nul || (echo Python was not found. Install Python 3.12 and try again. & pause & exit /b 1)
 where npm >nul 2>nul || (echo Node.js was not found. Install Node.js and try again. & pause & exit /b 1)
-where cloudflared >nul 2>nul || (
+rem cloudflared may not be on PATH in a terminal opened before it was installed, so fall back to its install folder
+where cloudflared >nul 2>nul && set "CF=cloudflared" || set "CF=%ProgramFiles(x86)%\cloudflared\cloudflared.exe"
+if /i not "%CF%"=="cloudflared" if not exist "%CF%" (
   echo cloudflared is not installed. Install it once with:
   echo     winget install Cloudflare.cloudflared
-  echo Then close this window, open a new one and run share.bat again.
+  echo Then run share.bat again.
   pause & exit /b 1
 )
 
@@ -36,4 +38,4 @@ echo.
 echo ANYWHERE: the tunnel window shows a link like https://something.trycloudflare.com . Open that link on any device.
 echo The link works only while this laptop and these windows stay open. Close all the windows to stop sharing.
 echo.
-start "Share link (Cloudflare tunnel)" cmd /k "cloudflared tunnel --url http://localhost:5173"
+start "Share link (Cloudflare tunnel)" cmd /k ""%CF%" tunnel --url http://localhost:5173"
